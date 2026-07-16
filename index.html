@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 中大岭院 MDE 新生 ORI · 联合书店合作建议</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pony:#c8623a;
+  --pony-deep:#a04020;
+  --pony-light:#fef0e8;
+  --sysu-red:#a8202a;
+  --navy:#003057;
+  --gold:#c8a050;
+  --bg:#fafaf7;
+  --card:#ffffff;
+  --border:#e3dfd3;
+  --text:#1a2a3a;
+  --light:#5f7d9c;
+  --muted:#8a9bb0;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",serif;
+  line-height:1.7;color:var(--text);background:var(--bg);
+  -webkit-font-smoothing:antialiased;font-size:15px;
+}
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+.nav .brand{font-size:14px;font-weight:700;color:var(--navy);letter-spacing:1px;}
+.nav .brand small{display:block;font-size:9px;color:var(--muted);letter-spacing:2px;margin-top:1px;}
+.nav-menu{display:flex;gap:18px;flex-wrap:wrap;}
+.nav-menu a{font-size:13px;color:var(--text);text-decoration:none;font-weight:500;transition:color 0.2s;}
+.nav-menu a:hover{color:var(--pony);}
+.cover{
+  min-height:100vh;position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 70% 55% at 100% 0%,rgba(200,98,58,0.16) 0%,transparent 60%),
+    radial-gradient(ellipse 75% 60% at 0% 100%,rgba(168,32,42,0.10) 0%,transparent 60%),
+    linear-gradient(180deg,#fff8f3 0%,#fafafa 50%,#fefcf7 100%);
+  display:flex;align-items:center;justify-content:center;
+  padding:100px 24px 60px;text-align:center;
+}
+.cover::before{
+  content:"";position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;
+  background-image:radial-gradient(circle at 10% 20%,rgba(200,98,58,0.04) 0%,transparent 8%),
+                   radial-gradient(circle at 90% 80%,rgba(168,32,42,0.04) 0%,transparent 8%);
+}
+.cover::after{
+  content:"博学　审问　慎思　明辨　笃行";
+  position:absolute;bottom:5%;left:50%;transform:translateX(-50%);
+  font-family:"STKaiti","KaiTi","楷体",serif;font-size:13px;letter-spacing:8px;
+  color:rgba(200,98,58,0.10);white-space:nowrap;pointer-events:none;z-index:0;
+}
+.cover-deco-top{
+  position:absolute;top:80px;left:0;right:0;height:2px;pointer-events:none;z-index:0;
+  background:linear-gradient(90deg,transparent 0%,var(--pony) 20%,var(--sysu-red) 50%,var(--gold) 80%,transparent 100%);
+  opacity:0.45;
+}
+.cover-deco-top::before,.cover-deco-top::after{
+  content:"";position:absolute;top:-4px;width:10px;height:10px;
+  border:1.5px solid var(--pony);transform:rotate(45deg);opacity:0.3;
+}
+.cover-deco-top::before{left:25%;}
+.cover-deco-top::after{right:25%;}
+.cover-inner{position:relative;z-index:1;max-width:760px;}
+.cover .sysu{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px;}
+.cover .sysu img{height:36px;}
+.cover .sysu .cn{font-size:15px;font-weight:700;color:var(--navy);letter-spacing:2px;}
+.cover .sysu .en{font-size:9px;color:var(--muted);letter-spacing:2px;}
+.cover-top-tag{
+  display:inline-block;padding:5px 16px;border:1px solid var(--pony);
+  border-radius:20px;font-size:12px;color:var(--pony-deep);
+  letter-spacing:2px;font-weight:600;background:rgba(255,255,255,0.7);margin-bottom:24px;
+}
+.cover h1{
+  font-family:"STKaiti","KaiTi","楷体",serif;
+  font-size:62px;font-weight:700;letter-spacing:8px;line-height:1.1;
+  background:linear-gradient(90deg,var(--pony-deep) 0%,var(--pony) 40%,var(--sysu-red) 75%,var(--gold) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:8px;
+}
+.cover .h1-en{font-size:11px;letter-spacing:5px;color:var(--muted);margin-bottom:22px;}
+.cover-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px 0;}
+.cover-divider::before,.cover-divider::after{
+  content:"";width:70px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.cover-divider span{color:var(--gold);font-size:14px;}
+.cover h2{font-size:24px;font-weight:700;color:var(--navy);letter-spacing:3px;margin-bottom:6px;}
+.cover h2-en{font-size:11px;letter-spacing:4px;color:var(--light);margin-bottom:18px;}
+.cover .theme{
+  display:inline-block;padding:7px 20px;border:1.5px solid var(--pony);
+  border-radius:24px;font-size:13px;letter-spacing:2px;
+  color:var(--pony-deep);font-weight:700;background:rgba(255,255,255,0.6);margin-bottom:32px;
+}
+.cover-info{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:36px;}
+.cover-info .card{
+  background:rgba(255,255,255,0.8);border:0.5px solid var(--border);
+  border-left:3px solid var(--pony);
+  border-radius:10px;padding:12px 18px;min-width:130px;text-align:left;
+}
+.cover-info .lbl{font-size:9px;color:var(--muted);letter-spacing:1.5px;margin-bottom:3px;}
+.cover-info .val{font-size:14px;font-weight:700;color:var(--navy);}
+.cover-cta{
+  display:inline-block;padding:14px 36px;border-radius:30px;
+  background:linear-gradient(135deg,var(--pony-deep),var(--pony));
+  color:#fff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:2px;
+  box-shadow:0 6px 20px rgba(200,98,58,0.3);transition:all 0.25s;
+}
+.cover-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,98,58,0.4);}
+.cover-foot{margin-top:36px;font-size:11px;color:var(--muted);letter-spacing:1px;line-height:1.8;}
+section{padding:64px 24px;max-width:1080px;margin:0 auto;}
+.section-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:64px;height:64px;border:2.5px solid var(--pony);
+  font-family:"STKaiti","KaiTi","楷体",serif;font-size:36px;
+  color:var(--pony);font-weight:700;line-height:1;
+  background:rgba(255,255,255,0.85);border-radius:4px;
+  transform:rotate(-2deg);margin-bottom:8px;position:relative;
+  box-shadow:2px 3px 8px rgba(200,98,58,0.15),inset 0 0 0 3px rgba(255,255,255,0.9);
+  transition:transform 0.3s;
+}
+.section-num:hover{transform:rotate(2deg) scale(1.05);}
+.section-title{
+  font-size:30px;font-weight:800;color:var(--navy);
+  border-left:5px solid var(--pony);padding:6px 0 6px 16px;margin-bottom:8px;
+  font-family:"STKaiti",serif;letter-spacing:2px;
+}
+.section-title-en{font-size:11px;color:var(--muted);letter-spacing:3px;margin-bottom:22px;padding-left:20px;}
+.section-lead{
+  font-size:15px;line-height:1.85;color:var(--text);
+  background:linear-gradient(135deg,#fff8f3 0%,#faf3e8 100%);
+  border-left:3px solid var(--gold);padding:16px 20px;border-radius:6px;margin-bottom:28px;
+}
+.section-lead strong{color:var(--pony-deep);}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;}
+.kpi{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:20px;text-align:center;transition:all 0.25s;
+  position:relative;overflow:hidden;
+}
+.kpi::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--pony),var(--gold));
+}
+.kpi:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(200,98,58,0.10),0 0 0 1px var(--pony) inset;
+  border-color:var(--pony);
+}
+.kpi .num{
+  font-family:"STKaiti",serif;font-size:36px;font-weight:700;
+  color:var(--pony);line-height:1.1;margin-bottom:4px;
+}
+.kpi .num small{font-size:18px;}
+.kpi .lbl{font-size:12px;color:var(--light);letter-spacing:1px;}
+.flow{
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  padding:28px;margin-bottom:24px;
+}
+.flow h3{font-size:18px;color:var(--navy);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.flow h3::before{content:"";width:5px;height:18px;background:var(--pony);border-radius:3px;}
+.flow-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+.flow-step{
+  text-align:center;padding:16px 10px;
+  background:linear-gradient(135deg,#fff8f3,#fff);
+  border:1px solid var(--border);border-radius:10px;position:relative;
+  transition:all 0.3s;
+}
+.flow-step:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(200,98,58,0.08);
+  border-color:var(--pony);
+}
+.flow-step .step-num{
+  display:inline-block;width:30px;height:30px;line-height:30px;
+  border-radius:50%;background:var(--pony);color:#fff;
+  font-weight:700;font-size:14px;margin-bottom:8px;
+}
+.flow-step .step-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.flow-step .step-desc{font-size:11px;color:var(--light);line-height:1.5;}
+.feasibility{
+  background:linear-gradient(135deg,#fff,#fff8f3);
+  border:1px solid var(--border);border-left:4px solid var(--pony);
+  border-radius:10px;padding:18px 22px;margin-bottom:24px;
+}
+.feasibility h4{font-size:15px;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.feasibility h4::before{content:"✓";color:var(--pony);font-weight:700;font-size:18px;}
+.feasibility p{font-size:13px;line-height:1.8;color:var(--text);}
+.feasibility p strong{color:var(--pony-deep);}
+.fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:20px;}
+.fit-card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:22px;position:relative;transition:all 0.25s;
+}
+.fit-card:hover{
+  border-color:var(--pony);
+  box-shadow:0 12px 32px rgba(200,98,58,0.10);
+  transform:translateY(-3px);
+}
+.fit-card .fc-ico{
+  width:48px;height:48px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;color:#fff;margin-bottom:12px;
+  background:linear-gradient(135deg,var(--pony),var(--pony-deep));
+}
+.fit-card h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.fit-card p{font-size:13px;line-height:1.7;color:var(--text);}
+.deliverable-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:20px;}
+.deliverable-card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:22px;position:relative;overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.03);
+}
+.deliverable-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--pony),var(--gold));
+}
+.deliverable-card h4{font-size:15px;color:var(--navy);margin-bottom:10px;}
+.deliverable-card ul{padding-left:18px;}
+.deliverable-card li{font-size:12.5px;line-height:1.75;margin-bottom:5px;color:var(--text);}
+.deliverable-card strong{color:var(--pony-deep);}
+.deal-note{
+  background:linear-gradient(135deg,#fff8f3,#fff);
+  border:1px solid var(--border);border-left:4px solid var(--pony);
+  border-radius:12px;padding:18px 22px;margin-top:16px;font-size:13px;line-height:1.8;
+}
+.deal-note strong{color:var(--pony-deep);}
+.sponsor-list{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:24px;margin-bottom:20px;
+}
+.sponsor-list h3{
+  font-size:17px;color:var(--navy);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+  padding-bottom:12px;border-bottom:2px solid var(--pony-light);
+}
+.sponsor-list h3::before{content:"";width:5px;height:18px;background:var(--pony);border-radius:3px;}
+.sponsor-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:14px 0;border-bottom:1px dashed var(--border);
+}
+.sponsor-item:last-child{border-bottom:none;}
+.sponsor-item .si-tag{
+  flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;
+  min-width:64px;height:26px;border-radius:13px;
+  font-size:11px;font-weight:700;letter-spacing:1px;
+}
+.sponsor-item .si-tag.tech{background:var(--pony-light);color:var(--pony-deep);}
+.sponsor-item .si-tag.goods{background:#f0e8e8;color:#7a4a4a;}
+.sponsor-item .si-tag.digital{background:#e8f0fe;color:#1a5fa8;}
+.sponsor-item .si-tab{font-size:12px;color:var(--muted);letter-spacing:1px;flex-shrink:0;width:60px;padding-top:2px;}
+.sponsor-item .si-tab strong{color:var(--navy);font-size:13px;display:block;}
+.sponsor-item .si-body{flex:1;}
+.sponsor-item .si-body h5{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.sponsor-item .si-body p{font-size:12.5px;line-height:1.7;color:var(--text);}
+.rights-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);font-size:12.5px;}
+.rights-table th{
+  background:linear-gradient(135deg,var(--pony-deep),var(--pony));color:#fff;
+  padding:12px 10px;text-align:center;font-size:12.5px;letter-spacing:1.5px;
+  border-bottom:2px solid var(--gold);
+}
+.rights-table td{padding:10px;border-top:1px solid var(--border);text-align:center;vertical-align:middle;}
+.rights-table td:first-child{text-align:left;background:#fff8f3;font-weight:600;color:var(--navy);}
+.rights-table .check{color:var(--pony);font-weight:700;font-size:16px;}
+.rights-table .partial{color:var(--gold);font-size:14px;}
+.rights-table tbody tr:nth-child(even){background:rgba(255,248,243,0.5);}
+.rights-table tbody tr:nth-child(odd){background:#fff;}
+.rights-table tbody tr:hover{background:rgba(200,98,58,0.04) !important;box-shadow:inset 3px 0 0 var(--pony);}
+.partners-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px;}
+.partner-card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:20px;text-align:center;
+}
+.partner-card h3{font-size:16px;color:var(--navy);margin-bottom:12px;letter-spacing:1px;}
+.partner-card img{width:100%;border-radius:8px;background:#fff;}
+.contact-card-single{
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  padding:32px 24px;text-align:center;max-width:380px;margin:0 auto;
+  transition:all 0.25s;
+}
+.contact-card-single:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 36px rgba(200,98,58,0.10);
+  border-color:var(--gold);
+}
+.contact-card-single img{
+  width:160px;height:160px;border-radius:10px;
+  border:1px solid var(--border);margin-bottom:14px;object-fit:contain;
+}
+.contact-card-single .name{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.contact-card-single .role{font-size:12px;color:var(--muted);margin-bottom:8px;letter-spacing:1.5px;}
+.contact-card-single .phone{font-size:16px;color:var(--pony);font-weight:700;letter-spacing:1px;}
+footer{
+  background:linear-gradient(135deg,var(--navy),#002240);
+  color:#fff;padding:40px 24px 20px;text-align:center;margin-top:40px;
+  position:relative;overflow:hidden;
+}
+footer::before{
+  content:"博学　审问　慎思　明辨　笃行";
+  position:absolute;top:8px;left:0;right:0;
+  font-family:"STKaiti","KaiTi","楷体",serif;font-size:15px;letter-spacing:12px;
+  color:rgba(200,160,80,0.12);white-space:nowrap;pointer-events:none;
+}
+footer::after{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+footer .foot-brand{
+  font-family:"STKaiti",serif;font-size:22px;letter-spacing:6px;
+  color:var(--gold);margin-bottom:4px;position:relative;z-index:1;
+}
+footer .foot-en{font-size:10px;color:#a0b5cc;letter-spacing:3px;margin-bottom:20px;position:relative;z-index:1;}
+footer .foot-divider{
+  width:60px;height:1px;background:var(--gold);margin:0 auto 16px;
+  position:relative;z-index:1;opacity:0.4;
+}
+footer .foot-line{font-size:12px;color:#a0b5cc;line-height:1.9;position:relative;z-index:1;}
+footer .foot-line strong{color:#fff;}
+.back-top{
+  position:fixed;bottom:24px;right:24px;width:42px;height:42px;
+  background:var(--pony);color:#fff;border-radius:50%;border:none;
+  font-size:18px;cursor:pointer;opacity:0;transition:opacity 0.3s;
+  box-shadow:0 4px 14px rgba(200,98,58,0.3);z-index:99;
+}
+.back-top.show{opacity:1;}
+.reveal{
+  opacity:0;transform:translateY(32px);
+  transition:opacity 0.7s ease,transform 0.7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+@media(max-width:768px){
+  .nav{padding:10px 16px;}
+  .nav-menu{display:none;}
+  .cover{padding:90px 16px 40px;}
+  .cover h1{font-size:42px;letter-spacing:5px;}
+  .cover h2{font-size:18px;letter-spacing:2px;}
+  .cover-info .card{min-width:110px;padding:10px 12px;}
+  .cover::after{font-size:10px;letter-spacing:4px;bottom:3%;}
+  .kpi-row{grid-template-columns:repeat(2,1fr);}
+  .flow-steps{grid-template-columns:repeat(2,1fr);}
+  .partners-row{grid-template-columns:1fr;}
+  .fit-grid{grid-template-columns:1fr;}
+  .deliverable-grid{grid-template-columns:1fr;}
+  .sponsor-item{flex-direction:column;gap:8px;}
+  .sponsor-item .si-tag{align-self:flex-start;}
+  .sponsor-item .si-tab{width:auto;}
+  .section-title{font-size:22px;}
+  .section-num{width:52px;height:52px;font-size:28px;}
+  section{padding:48px 16px;}
+  .rights-table{font-size:11px;}
+  .rights-table th,.rights-table td{padding:8px 6px;}
+}
+@media print{
+  .nav,.back-top,.cover-cta{display:none !important;}
+  body{font-size:12px;line-height:1.5;color:#000;background:#fff;}
+  .cover{
+    min-height:auto;padding:40px 0 20px;background:none;
+    text-align:center;page-break-after:always;
+  }
+  .cover h1{
+    font-size:36px;letter-spacing:4px;
+    background:none;-webkit-text-fill-color:var(--pony-deep);color:var(--pony-deep);
+  }
+  .cover h2{font-size:18px;}
+  .cover .h1-en,.cover .sysu .en,.cover-top-tag{font-size:10px;}
+  .cover::after{font-size:11px;letter-spacing:6px;color:rgba(200,98,58,0.15);}
+  .cover-deco-top{display:none;}
+  .cover-info{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+  .cover-info .card{border:1px solid #ccc;background:#fff;min-width:100px;padding:8px 12px;}
+  section{padding:24px 0;max-width:100%;break-inside:avoid;}
+  .section-title{font-size:20px;border-left-width:4px;}
+  .section-num{width:48px;height:48px;font-size:26px;}
+  .kpi,.flow-step,.flow,.partners,.partner-card,.contact-card-single,.sponsor-list,.feasibility,.fit-card{
+    break-inside:avoid;box-shadow:none !important;page-break-inside:avoid;
+  }
+  .kpi-row{grid-template-columns:repeat(4,1fr);}
+  .flow-steps{grid-template-columns:repeat(5,1fr);}
+  .fit-grid{grid-template-columns:repeat(2,1fr);}
+  .deliverable-grid{grid-template-columns:repeat(3,1fr);}
+  .partners-row{grid-template-columns:repeat(2,1fr);}
+  .rights-table{font-size:10px;box-shadow:none;}
+  .rights-table th{background:var(--pony) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .rights-table tr:nth-child(even){background:#fff8f3 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  footer{
+    background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;
+    color:#fff !important;page-break-before:always;
+  }
+  .reveal{opacity:1 !important;transform:none !important;}
+  @page{margin:1.5cm;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">
+    2026 中大岭院 ORI · 联合书店合作建议
+    <small>LINGNAN × UNITED BOOKSTORE · READING TOGETHER</small>
+  </div>
+  <div class="nav-menu">
+    <a href="#about">关于ORI</a>
+    <a href="#value">合作价值</a>
+    <a href="#award">图书发放</a>
+    <a href="#fit">契合点</a>
+    <a href="#deliverables">合作呈现</a>
+    <a href="#sponsor">拟合作内容</a>
+    <a href="#contact">联系</a>
+  </div>
+</nav>
+
+<div class="cover">
+  <div class="cover-deco-top"></div>
+  <div class="cover-inner">
+    <div class="sysu">
+      <div>
+        <div class="cn">中山大学岭南学院</div>
+        <div class="en">LINGNAN COLLEGE · SUN YAT-SEN UNIVERSITY</div>
+      </div>
+    </div>
+
+    <div class="cover-top-tag">新生入学导向活动 · 阅读共创建议</div>
+
+    <h1>岭启韶华</h1>
+    <div class="h1-en">LINGQI · SHAOHUA</div>
+
+    <div class="cover-divider"><span>· · ·</span></div>
+
+    <h2>致 · 联合书店</h2>
+    <h2-en>ORIENTATION 2026 × UNITED BOOKSTORE</h2-en>
+
+    <div class="theme">"数智领航，启程岭南" · 2026 级 MDE</div>
+
+    <div class="cover-info">
+      <div class="card">
+        <div class="lbl">DATE</div>
+        <div class="val">2026.09.04 - 09.06</div>
+      </div>
+      <div class="card">
+        <div class="lbl">VENUE</div>
+        <div class="val">中山大学康乐园</div>
+      </div>
+      <div class="card">
+        <div class="lbl">SCALE</div>
+        <div class="val">180+ 名 MDE 新生</div>
+      </div>
+      <div class="card">
+        <div class="lbl">FOCUS</div>
+        <div class="val">图书奖品合作</div>
+      </div>
+    </div>
+
+    <a href="#sponsor" class="cover-cta">查看合作建议 →</a>
+
+    <div class="cover-foot">
+      中山大学岭南学院专硕教育中心<br>
+      中山大学岭南学院第三届非全日制专业硕士学生联合会<br>
+      本方案最终解释权归 ORI 组委会所有
+    </div>
+  </div>
+</div>
+
+<section id="about" class="reveal">
+  <div class="section-num">壹</div>
+  <h2 class="section-title">关于 ORI 活动</h2>
+  <div class="section-title-en">ABOUT ORIENTATION</div>
+
+  <div class="section-lead reveal reveal-delay-1">
+    新生入学导向活动（<strong>Orientation，简称 ORI</strong>）是中山大学岭南学院每一位新生的"开学第一课"。
+    自 <strong>1999 级</strong>开始举办，迄今已延续 <strong>26 届</strong>，是岭南学院最具传承意义的品牌活动。
+    2026 级 MDE 新生将在三天内完成<strong>校园认知、团队展示、趣味运动、沙盘模拟、商业策划、AI 轻应用、视频创作、结课晚宴</strong>等八大环节。
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi reveal reveal-delay-1">
+      <div class="num">180<small>+</small></div>
+      <div class="lbl">2026 级 MDE 新生</div>
+    </div>
+    <div class="kpi reveal reveal-delay-2">
+      <div class="num">26<small>届</small></div>
+      <div class="lbl">品牌活动传承</div>
+    </div>
+    <div class="kpi reveal reveal-delay-3">
+      <div class="num">8<small>大</small></div>
+      <div class="lbl">沉浸式环节</div>
+    </div>
+    <div class="kpi reveal reveal-delay-4">
+      <div class="num">5000<small>+</small></div>
+      <div class="lbl">校友社群辐射</div>
+    </div>
+  </div>
+</section>
+
+<section id="value" class="reveal">
+  <div class="section-num">贰</div>
+  <h2 class="section-title">为什么值得合作</h2>
+  <div class="section-title-en">WHY PARTNER WITH US</div>
+
+  <div class="section-lead">
+    MDE（数字经济硕士）是<strong>全国规模最大的非全日制数字经济专硕项目</strong>。
+    180+ 名新生均为 <strong>3 年以上工作经验</strong>的金融、互联网、高端制造、战略咨询等行业的企事业单位中层、高管与企业家。
+    合作岭院 ORI，等于一次触达大湾区数字经济未来决策者。
+  </div>
+
+  <div class="kpi-row" style="grid-template-columns:repeat(3,1fr);">
+    <div class="kpi reveal reveal-delay-1">
+      <div class="num">🎓</div>
+      <div class="lbl" style="margin-top:6px;">数字经济硕士生</div>
+    </div>
+    <div class="kpi reveal reveal-delay-2">
+      <div class="num">📚</div>
+      <div class="lbl" style="margin-top:6px;">有内容需求的学习社群</div>
+    </div>
+    <div class="kpi reveal reveal-delay-3">
+      <div class="num">💬</div>
+      <div class="lbl" style="margin-top:6px;">跨行业的观点交流</div>
+    </div>
+  </div>
+
+  <div class="section-lead" style="margin-top:18px;">
+    <strong>联合书店与岭院 MDE 项目的契合点：</strong>
+    ORI 是新生由职场身份回到学习共同体的起点，而图书是最适合承载“新阶段、新视野”的礼物之一；
+    <strong>优质阅读内容与新生共同学习、观点表达和长期社群生活高度匹配</strong>；
+    通过有主题、有选择的图书奖励，联合书店可从一次简单的物资支持，成为新生入学记忆中的<strong>阅读伙伴</strong>。
+  </div>
+</section>
+
+<section id="award" class="reveal">
+  <div class="section-num">叁</div>
+  <h2 class="section-title">图书奖品怎么发，才能真正被记住</h2>
+  <div class="section-title-en">BOOK PRIZE DESIGN · RECOMMENDED APPROACH</div>
+
+  <div class="section-lead">
+    图书奖品的发放可根据<strong>贵方提供的图书数量与品类</strong>灵活安排：若数量适中，可优先作为<strong>团队协作、创意表达、积极参与</strong>等奖品；
+    若数量较充足，可在保留团队奖项的基础上，增加<strong>晚宴抽奖图书</strong>，兼顾成果认可与现场氛围。具体比例及奖项设置，可在确认书目后由双方进一步协商。
+  </div>
+
+  <div class="flow">
+    <h3>推荐发放路径：让每本书都对应一次成果</h3>
+    <div class="flow-steps">
+      <div class="flow-step reveal reveal-delay-1">
+        <div class="step-num">1</div>
+        <div class="step-name">共同书单</div>
+        <div class="step-desc">联合书店提供主题选书建议，组委会确认适配 ORI 的书目</div>
+      </div>
+      <div class="flow-step reveal reveal-delay-2">
+        <div class="step-num">2</div>
+        <div class="step-name">过程激励</div>
+        <div class="step-desc">校园认知、团队展示等环节设置少量“阅读奖励”</div>
+      </div>
+      <div class="flow-step reveal reveal-delay-3">
+        <div class="step-num">3</div>
+        <div class="step-name">成果评选</div>
+        <div class="step-desc">以团队表现、创意作品和积极参与为依据产生获奖名单</div>
+      </div>
+      <div class="flow-step reveal reveal-delay-4">
+        <div class="step-num">4</div>
+        <div class="step-name">晚宴颁发</div>
+        <div class="step-desc">结课晚宴集中颁发主题奖项，增强仪式感与合影传播</div>
+      </div>
+      <div class="flow-step reveal reveal-delay-1">
+        <div class="step-num">5</div>
+        <div class="step-name">晚宴抽奖</div>
+        <div class="step-desc">如图书数量充足，可安排部分图书作为晚宴“书香彩蛋”</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:17px;color:var(--navy);margin:20px 0 12px;">图书发放建议（根据支持数量协商）</h3>
+  <div class="kpi-row" style="grid-template-columns:repeat(3,1fr);">
+    <div class="kpi">
+      <div class="num">优先</div>
+      <div class="lbl">团队协作 / 单项成果奖</div>
+    </div>
+    <div class="kpi">
+      <div class="num">可选</div>
+      <div class="lbl">晚宴抽奖奖品</div>
+    </div>
+    <div class="kpi">
+      <div class="num">10<small>本</small></div>
+      <div class="lbl">读书社首份礼物</div>
+    </div>
+  </div>
+
+  <div class="feasibility reveal reveal-delay-2">
+    <h4>适配性设计：按图书数量灵活组合</h4>
+    <p>如图书数量适中，可集中作为<strong>团队协作、创意作品、积极参与</strong>等奖项，强化奖励与活动成果的关联；如图书数量较充足，则可在保留上述奖项的基础上，增加<strong>晚宴抽奖</strong>，让更多同学参与。最终奖项数量、图书品类和发放比例均以双方确认书目后为准。</p>
+  </div>
+</section>
+
+<section id="fit" class="reveal">
+  <div class="section-num">肆</div>
+  <h2 class="section-title">联合书店 × ORI · 4 个自然契合点</h2>
+  <div class="section-title-en">DEEPER FIT · READING IN ORIENTATION</div>
+
+  <div class="section-lead">
+    ORI 不只是三天活动，更是新生加入岭南学习共同体的第一个共同记忆。
+    联合书店的加入，可以把“读书”从个人行为延展为一种<strong>共同成长、交换观点、开启新阶段</strong>的校园体验；
+    图书也不只是奖品，而是一份在 MDE 学习旅程开始时被郑重送出的<strong>思想礼物</strong>。
+  </div>
+
+  <div class="fit-grid">
+    <div class="fit-card reveal reveal-delay-1">
+      <div class="fc-ico">🌱</div>
+      <h4>契合点一 · 入学起点的成长礼物</h4>
+      <p>对刚进入 MDE 的新生而言，一本经过选择的书，比一般礼品更有长期陪伴感。它承载的是“在忙碌工作之外，重新开始学习与思考”的提醒，也与 ORI 的入学导向属性天然一致。</p>
+    </div>
+
+    <div class="fit-card reveal reveal-delay-2">
+      <div class="fc-ico">💬</div>
+      <h4>契合点二 · 书店作为观点相遇的空间</h4>
+      <p>MDE 学生来自金融、互联网、制造、咨询等不同领域。图书能够自然打开商业、科技、人文与社会议题，让新生在团队协作之外，也拥有彼此推荐、交换观点和建立连接的共同话题。</p>
+    </div>
+
+    <div class="fit-card reveal reveal-delay-3">
+      <div class="fc-ico">🎯</div>
+      <h4>契合点三 · 奖励成果，而不是随机派发</h4>
+      <p>ORI 有团队展示、商业策划、AI 轻应用、视频创作等需要投入与表达的环节。把图书设置为主题奖项，能让“阅读”与协作、创意、行动力关联起来，提升奖品价值，也让书店品牌以更克制的方式被记住。</p>
+    </div>
+
+    <div class="fit-card reveal reveal-delay-4">
+      <div class="fc-ico">📖</div>
+      <h4>契合点四 · 形成可延续的书单记忆</h4>
+      <p>联合书店长期以人文、艺术与优质生活为定位，并通过主题读书会、分享活动和会员社群延展阅读体验。ORI 可在活动后发起<strong>“联合书店 × 岭南 MDE 阅读兴趣小组”</strong>：以获奖图书和成长书单为起点，在班级社群征集首批成员，后续视参与情况组织共读、主题分享或到店阅读活动；首次活动还可借鉴其“阅读一小时”公益挑战的仪式感设计，让一次图书支持沉淀为持续的阅读连接。</p>
+    </div>
+  </div>
+</section>
+
+<section id="deliverables" class="reveal">
+  <div class="section-num">伍</div>
+  <h2 class="section-title">合作如何被自然呈现</h2>
+  <div class="section-title-en">FROM BOOKS TO A SHARED MEMORY</div>
+
+  <div class="section-lead">
+    本次合作以<strong>“联合书店 · ORI 成长书单”</strong>为核心：活动前共同确定书目与奖项方向，活动中通过颁奖、获奖寄语和适度的品牌鸣谢自然呈现，活动后在 ORI 整体推文中保留合作记录。
+    方案以<strong>可执行、低负担、便于协商</strong>为原则，不预设过重的商业化露出。
+  </div>
+
+  <div class="deliverable-grid">
+    <div class="deliverable-card reveal reveal-delay-1">
+      <h4>活动前 · 共同选书</h4>
+      <ul>
+        <li>确认图书数量、品类与单册价值区间，形成<strong>ORI 成长书单</strong>。</li>
+        <li>围绕商业、科技、人文、职业成长等方向，提供<strong>主题选书建议</strong>。</li>
+        <li>如方便，可提供书签、购书券或简短推荐语，作为图书附加内容。</li>
+      </ul>
+    </div>
+
+    <div class="deliverable-card reveal reveal-delay-2">
+      <h4>活动中 · 主题颁奖</h4>
+      <ul>
+        <li>根据图书数量，灵活用于<strong>团队协作、创意表达、积极参与</strong>等奖项。</li>
+        <li>晚宴颁奖环节进行<strong>图书授予与主持人口播鸣谢</strong>，保留合影记忆点。</li>
+        <li>如图书数量较充足，可安排部分图书用于晚宴抽奖，作为轻量“书香彩蛋”。</li>
+      </ul>
+    </div>
+
+    <div class="deliverable-card reveal reveal-delay-3">
+      <h4>活动后 · 阅读延续</h4>
+      <ul>
+        <li>ORI 活动整体将安排<strong>公众号推文回顾</strong>，合作可在相关内容中自然呈现。</li>
+        <li>活动后发起<strong>“联合书店 × 岭南 MDE 阅读兴趣小组”</strong>，以成长书单为起点，在班级社群持续分享书目与阅读感受。</li>
+        <li>设置<strong>“读书社首份礼物”</strong>（约 10 本），在阅读兴趣小组线上群内以轻量互动抽奖方式发放，为社群启动创造首批参与感。</li>
+        <li>后续可视参与情况，与联合书店共同探索<strong>共读、主题分享或到店阅读</strong>等轻量活动；如现场媒体报道最终成行，也可自然呈现图书颁发环节。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="deal-note reveal reveal-delay-4">
+    <strong>对联合书店的核心价值：</strong>
+    在岭南 MDE 新生的入学第一课中，以一份有内容、有温度的“成长书单”建立品牌连接；图书被郑重颁发、被带回日常，并可通过阅读兴趣小组延续为共读与分享的社群连接。
+  </div>
+</section>
+
+<section id="sponsor" class="reveal">
+  <div class="section-num">陆</div>
+  <h2 class="section-title">拟合作内容</h2>
+  <div class="section-title-en">PROPOSED COLLABORATION · BOOKS &amp; READING</div>
+
+  <div class="section-lead">
+    感谢联合书店对 2026 岭南 MDE ORI 的合作意向。基于活动规模与图书作为奖品的使用场景，
+    我们建议以<strong>“主题图书支持 + 精选书单共创 + 轻量品牌呈现”</strong>开展合作。
+    图书数量、品类和具体发放奖项均可根据联合书店的实际支持情况进一步协商，不要求一次覆盖全部新生。
+  </div>
+
+  <div class="sponsor-list reveal reveal-delay-1">
+    <h3>一、图书支持（核心合作内容）</h3>
+
+    <div class="sponsor-item">
+      <span class="si-tag goods">图书</span>
+      <div class="si-tab"><strong>P1</strong>主题奖</div>
+      <div class="si-body">
+        <h5>ORI 成长主题图书 · 建议 30-60 册</h5>
+        <p>优先用于<strong>优秀团队、最佳创意、最佳协作、积极参与</strong>等主题奖项。建议以每册图书为一个独立奖品，兼顾获奖面与奖品价值；具体数量可按书店实际支持能力确定。</p>
+      </div>
+    </div>
+
+    <div class="sponsor-item">
+      <span class="si-tag goods">图书</span>
+      <div class="si-tab"><strong>P2</strong>晚宴奖</div>
+      <div class="si-body">
+        <h5>“书香彩蛋”抽奖图书 · 建议 5-10 册</h5>
+        <p>在结课晚宴保留少量图书作为抽奖彩蛋，提升现场氛围。该部分建议占总图书支持的<strong>较小比例</strong>，以确保合作主线仍是对活动成果与阅读兴趣的鼓励。</p>
+      </div>
+    </div>
+
+    <div class="sponsor-item">
+      <span class="si-tag goods">图书</span>
+      <div class="si-tab"><strong>P3</strong>特色奖</div>
+      <div class="si-body">
+        <h5>主题书单套装 / 特别奖品（可选）</h5>
+        <p>如联合书店有适合的主题套装、签名本、特色出版物或书店推荐好书，可设置为<strong>最佳作品、最佳分享、幸运读者</strong>等特别奖项，形成更有辨识度的颁奖记忆点。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sponsor-list reveal reveal-delay-2">
+    <h3>二、阅读内容与轻量物料（可选）</h3>
+
+    <div class="sponsor-item">
+      <span class="si-tag digital">内容</span>
+      <div class="si-tab"><strong>P4</strong>书单</div>
+      <div class="si-body">
+        <h5>“新生入学阅读书单” · 1 份</h5>
+        <p>由联合书店提供 10-20 本精选推荐及简短推荐语，围绕<strong>数字时代、商业思考、职业成长、人文视野</strong>等方向呈现。可作为活动推文与阅读兴趣小组的共读起点，不需额外设置商业化打卡。</p>
+      </div>
+    </div>
+
+    <div class="sponsor-item">
+      <span class="si-tag goods">物料</span>
+      <div class="si-tab"><strong>P5</strong>书签</div>
+      <div class="si-body">
+        <h5>书签 / 阅读卡 / 购书优惠（如有）</h5>
+        <p>如书店有现成书签、阅读卡、购书优惠或会员福利，可随图书发放或放入新生物资包。建议以<strong>实用且克制</strong>的形式呈现，避免影响 ORI 的活动主线。</p>
+      </div>
+    </div>
+
+    <div class="sponsor-item">
+      <span class="si-tag digital">内容</span>
+      <div class="si-tab"><strong>P6</strong>寄语</div>
+      <div class="si-body">
+        <h5>书店推荐寄语（可选）</h5>
+        <p>可为获奖图书附一张简短寄语或推荐卡，例如“送给刚开始岭南学习旅程的你”。这类内容比额外展位更贴近图书本身，也更容易获得学生接受。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feasibility reveal reveal-delay-4">
+    <h4>合作确认时建议优先明确的 4 件事</h4>
+    <p>① 图书支持数量与送达时间；② 图书品类、单册价值和是否可由获奖者选择；③ 是否提供书单、书签或优惠等附加内容；④ 活动现场、推文与阅读兴趣小组中的品牌呈现方式。上述内容均可按联合书店实际资源进一步协商确认。</p>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="section-num">柒</div>
+  <h2 class="section-title">联系洽谈</h2>
+  <div class="section-title-en">GET IN TOUCH</div>
+
+  <div class="section-lead">
+    欢迎添加联系人微信进一步沟通，<strong>24 小时内</strong>回复合作意向，
+    可根据联合书店实际支持的<strong>图书数量、主题与物料</strong>共同确认落地安排。
+  </div>
+
+  <div class="contact-card-single reveal reveal-delay-1">
+    <img src="assets/邱梓涛.jpg" alt="邱梓涛">
+    <div class="name">邱梓涛</div>
+    <div class="role">学联外联部部长</div>
+    <div class="phone">132 8877 8829</div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">岭启韶华</div>
+  <div class="foot-en">LINGQI · SHAOHUA · 2026 MDE ORIENTATION × UNITED BOOKSTORE</div>
+  <div class="foot-divider"></div>
+  <div class="foot-line">
+    <strong>主办</strong>　中山大学岭南学院专硕教育中心<br>
+    <strong>承办</strong>　中山大学岭南学院第三届非全日制专业硕士学生联合会<br>
+    <strong>协办</strong>　2026 ORI 组委会 · 招商项目组<br>
+    项目方案 · 2026 年 7 月　|　本方案最终解释权归 ORI 组委会所有
+  </div>
+</footer>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+window.addEventListener('scroll',function(){
+  var btn=document.querySelector('.back-top');
+  if(window.scrollY>400)btn.classList.add('show');else btn.classList.remove('show');
+});
+(function(){
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){
+    observer.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
