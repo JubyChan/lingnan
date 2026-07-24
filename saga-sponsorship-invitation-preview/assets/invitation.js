@@ -2,16 +2,15 @@
   const body=document.body;
   const gate=document.querySelector('.invitation-gate');
   const main=document.querySelector('main');
-  const chooser=document.querySelector('[data-choose]');
-  function enter(view){
+  const enterLink=document.querySelector('[data-enter]');
+  function enter(){
     body.classList.add('is-reading');
-    body.dataset.view=view;
+    body.dataset.view='desktop';
     main.setAttribute('tabindex','-1');
     window.setTimeout(()=>main.focus({preventScroll:true}),0);
     window.scrollTo(0,0);
   }
-  document.querySelectorAll('[data-view-choice]').forEach((link)=>link.addEventListener('click',(event)=>{event.preventDefault();enter(link.dataset.viewChoice)}));
-  if(chooser) chooser.addEventListener('click',()=>{body.classList.remove('is-reading');window.scrollTo(0,0);gate.focus();});
+  if(enterLink) enterLink.addEventListener('click',(event)=>{event.preventDefault();enter();});
   const hour=document.querySelector('.watch-face .hour');
   const minute=document.querySelector('.watch-face .minute');
   const second=document.querySelector('.watch-face .second');

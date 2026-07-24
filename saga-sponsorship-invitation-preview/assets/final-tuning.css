@@ -1,0 +1,24 @@
+/* Final visual rhythm: alternating paper, mist, ink and wine sections. */
+.invitation-letter{max-width:720px;font-size:clamp(18px,1.75vw,21px);white-space:nowrap}
+.invitation-desktop-tip{margin:18px 0 0;color:#8a857b;font-size:12px;letter-spacing:.06em}
+body[data-view="desktop"] .school-intro{background:#f7f4ee}
+body[data-view="desktop"] .ori-intro{background:#e7eeeb}
+body[data-view="desktop"] .schedule-section{background:#fffdf8}
+body[data-view="desktop"] .competition-brief{background:#ebe5d9}
+body[data-view="desktop"] .about{background:#f4f0e8}
+body[data-view="desktop"] .brand-story{background:#101317}
+body[data-view="desktop"] #scenes{background:#ece5d9}
+body[data-view="desktop"] .customization{background:#292d30}
+body[data-view="desktop"] .rights-section{background:#8c2430}
+body[data-view="desktop"] .next-step{background:#fffdf8}
+@media(max-width:760px){
+  .invitation-letter{white-space:normal;font-size:18px}
+  .invitation-desktop-tip{font-size:11px;line-height:1.7}
+  body[data-view="desktop"] .school-intro{background:#f7f4ee}
+  body[data-view="desktop"] .ori-intro{background:#e7eeeb}
+  body[data-view="desktop"] .schedule-section{background:#fffdf8}
+  body[data-view="desktop"] .competition-brief{background:#ebe5d9}
+  body[data-view="desktop"] .about{background:#f4f0e8}
+  body[data-view="desktop"] #scenes{background:#ece5d9}
+  body[data-view="desktop"] .next-step{background:#fffdf8}
+}
