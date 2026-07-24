@@ -9,7 +9,17 @@ body[data-view="desktop"] .about{background:#fffdf8}
 body[data-view="desktop"] .brand-story{background:#101317}
 body[data-view="desktop"] #scenes{background:#ece5d9}
 body[data-view="desktop"] .customization{background:#292d30}
-body[data-view="desktop"] .rights-section{background:#8c2430}
+/* 权益页回归同一组纸感色阶，保持与第十部分的明暗交替。 */
+body[data-view="desktop"] .rights-section{background:#ebe5d9;color:#101317}
+body[data-view="desktop"] .rights-section .section-kicker.light{color:#5b554b}
+body[data-view="desktop"] .rights-section .light-heading h2{color:#101317}
+body[data-view="desktop"] .rights-section .light-heading p{color:#666158}
+body[data-view="desktop"] .rights-section .rights-table{border-color:#1013172b}
+body[data-view="desktop"] .rights-section .rights-row{border-color:#1013172b}
+body[data-view="desktop"] .rights-section .rights-row strong{color:#101317}
+body[data-view="desktop"] .rights-section .rights-row span{color:#4f4b44}
+body[data-view="desktop"] .rights-section .rights-row small{color:#777066}
+body[data-view="desktop"] .rights-section .rights-head span{color:#777066}
 body[data-view="desktop"] .next-step{background:#fffdf8}
 @media(max-width:760px){
   .invitation-letter{white-space:normal;font-size:18px}
@@ -19,6 +29,14 @@ body[data-view="desktop"] .next-step{background:#fffdf8}
   body[data-view="desktop"] .schedule-section{background:#fffdf8}
   body[data-view="desktop"] .competition-brief{background:#ebe5d9}
   body[data-view="desktop"] .about{background:#fffdf8}
+  body[data-view="desktop"] .rights-section{background:#ebe5d9;color:#101317}
+  body[data-view="desktop"] .rights-section .section-kicker.light{color:#5b554b}
+  body[data-view="desktop"] .rights-section .light-heading h2{color:#101317}
+  body[data-view="desktop"] .rights-section .light-heading p{color:#666158}
+  body[data-view="desktop"] .rights-section .rights-table,body[data-view="desktop"] .rights-section .rights-row{border-color:#1013172b}
+  body[data-view="desktop"] .rights-section .rights-row strong{color:#101317}
+  body[data-view="desktop"] .rights-section .rights-row span{color:#4f4b44}
+  body[data-view="desktop"] .rights-section .rights-row small,body[data-view="desktop"] .rights-section .rights-head span{color:#777066}
   body[data-view="desktop"] #scenes{background:#ece5d9}
   body[data-view="desktop"] .next-step{background:#fffdf8}
 }
