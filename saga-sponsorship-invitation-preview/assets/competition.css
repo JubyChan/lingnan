@@ -29,5 +29,5 @@
 .competition-note{border-left:3px solid var(--red);padding:17px 20px;background:#fffdf8;color:var(--ink-soft);font-size:14px;line-height:1.8}
 .competition-note strong{color:var(--red)}
 @media(max-width:1050px){.competition-signals{grid-template-columns:1fr 1fr}.competition-signals article:first-child{grid-column:1/-1}.track-card{min-height:610px}}
-@media(max-width:760px){.competition-signals,.track-grid{grid-template-columns:1fr;margin-top:2.5rem}.competition-signals article{min-height:0;padding:24px}.competition-signals strong{margin-top:22px}.track-card{min-height:580px;padding:28px 24px}.track-card h3{font-size:28px}.track-output{right:24px;bottom:25px;left:24px}.competition-note{font-size:13px}}
+@media(max-width:760px){.competition-signals,.track-grid{grid-template-columns:1fr;margin-top:2.5rem}.competition-signals article{min-height:0;padding:24px}.competition-signals strong{margin-top:22px}.track-card{min-height:0;padding:28px 24px}.track-card h3{font-size:28px}.track-output{position:static;margin:22px 0 0;padding-left:14px}.competition-note{font-size:13px}}
 @media(max-width:760px){.competition-brief .section-heading h2{font-size:clamp(28px,8.4vw,40px);line-height:1.18;letter-spacing:-.04em}.competition-brief .section-heading h2,.competition-brief .section-heading h2 em{white-space:nowrap}}
