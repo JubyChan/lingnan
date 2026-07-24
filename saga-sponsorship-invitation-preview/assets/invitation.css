@@ -25,3 +25,4 @@ body.is-reading .invitation-gate{display:none}
   body[data-view="mobile"] .gift-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:26px -22px 0;padding:0 22px;gap:10px}body[data-view="mobile"] .gift-grid article{flex:0 0 87%;min-height:310px;scroll-snap-align:start;padding:29px 26px}body[data-view="mobile"] .gift-grid h3{margin-top:55px}body[data-view="mobile"] .total-bar{margin:12px 0 0;padding:25px 22px}.schedule-table{margin-top:25px}.schedule-row{padding:20px}.rights-row{padding:20px 0}.next-step{display:block}.next-card{margin-top:36px}body[data-view="mobile"] footer{padding:48px 22px}
 }
 @media(prefers-reduced-motion:reduce){.invitation-actions a{transition:none}}
+.schedule-section{background:#fffdf8}.schedule-section::before{background:var(--gold)}@media(max-width:760px){body[data-view="mobile"] .schedule-section{background:#fffdf8}body[data-view="mobile"] .schedule-section::before{background:var(--gold)}}
